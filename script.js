@@ -1,14 +1,14 @@
 
 // Imagenes que van a la diapositivas 
-var imagenes = ["imagenes/verduras.png" , "imagenes/limones.png" , "imagenes/pizza.png", "imagenes/carne.png"],
-    cont = 0
+var imagenes = ["imagenes/verduras.png" , "imagenes/limones.png" , "imagenes/pizza.png", "imagenes/carne.png"]
+    var cont = 0;
 
 function carrusel (contenedor) {
     contenedor.addEventListener('click', e => {
-        let atras = contenedor.querySelector('.atras'),
-        adelante = contenedor.querySelector('.adelante'),
-        img = contenedor.querySelector('img'),
-        tgt = e.target;
+        let atras = contenedor.querySelector('.atras');
+        let adelante = contenedor.querySelector('.adelante');
+        let img = contenedor.querySelector('img');
+        let tgt = e.target;
 
 
     if (tgt == atras) {
@@ -42,7 +42,7 @@ function carrusel (contenedor) {
 // Una vez cargada la pagina, se desplazan las imagenes
 
 document.addEventListener("DOMContentLoaded", () => {
-    let contenedor = document.querySelector(".contenedor")
+    let contenedor = document.querySelector(".contenedor");
 
     carrusel(contenedor);
 
